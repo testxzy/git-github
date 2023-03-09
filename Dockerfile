@@ -7,3 +7,5 @@ RUN gem install gazer
 RUN pip install looker-deployer
 
 RUN ldeploy content -h
+
+RUN pwd
