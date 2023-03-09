@@ -8,7 +8,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event.comment.body }}
+      - run: echo 'hello world'
 
 
 
