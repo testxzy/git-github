@@ -5,3 +5,5 @@ RUN apt -y install ruby ruby-dev
 RUN gem install gazer
 
 RUN pip install looker-deployer
+
+CMD ldeploy
