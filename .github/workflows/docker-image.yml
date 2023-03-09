@@ -7,10 +7,14 @@ on:
     branches: [ "main" ]
     
 jobs:
-  example:
+  production-deploy:
+    if: contains(github.event.comment.body, 'amir')
     runs-on: ubuntu-latest
     steps:
-      - name: Testing the trigger.
-        if: contains(github.event.comment.body, 'amir')
-        run: echo "This is amir comment"
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+
 
