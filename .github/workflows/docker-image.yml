@@ -7,8 +7,5 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Commit body ${{ github.event.comment.body }}
-      - run: echo 'hello world'
+
 
