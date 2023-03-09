@@ -8,9 +8,7 @@ on:
 
 jobs:
 
-script:
-    - echo "Variables are '$CI_PIPELINE_SOURCE' "
-build:
+  build:
 
     runs-on: ubuntu-latest
 
