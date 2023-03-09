@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Testing the trigger.
         if: contains(github.event.comment.body, 'amir')
-        run: echo "This is a pull request comment event"
+        run: echo "This is amir comment"
 
