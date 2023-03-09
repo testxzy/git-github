@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Commit body ${{ github.event.comment.body }}
+      - uses: actions/checkout@v3
 
