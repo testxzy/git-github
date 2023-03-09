@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v3
-       - name: Build the Docker image
+       - name: Build the Docker image ${{ github.event.comment.body }}
          run: echo 'hello world'
 
 
