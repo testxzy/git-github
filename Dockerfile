@@ -6,4 +6,4 @@ RUN gem install gazer
 
 RUN pip install looker-deployer
 
-CMD ldeploy
+RUN ldeploy content -h
