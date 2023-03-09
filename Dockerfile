@@ -8,8 +8,8 @@ RUN gem install gazer
 
 RUN pip install looker-deployer
 
-RUN mkdir looker_export
+CMD mkdir looker_export
 
-RUN ldeploy content export --env dev  --ini /looker_code/looker.ini  --folders 146 --local-target /looker_export/
+CMD ldeploy content export --env dev  --ini /looker_code/looker.ini  --folders 146 --local-target /looker_export/
 
-RUN ls looker_export/Shared/'Looker SDK Test'
+CMD ls looker_export/Shared/'Looker SDK Test'
