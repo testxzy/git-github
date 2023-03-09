@@ -10,4 +10,5 @@ jobs:
     steps:
       - name: Commit body ${{ github.event.comment.body }}
       - uses: actions/checkout@v3
+      - run: echo 'hello world'
 
