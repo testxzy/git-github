@@ -1,6 +1,7 @@
-# Add a new comment to trigger build.
+FROM python:3.9-slim
 
-# Basic nginx dockerfile starting with Ubuntu 20.04
-FROM ubuntu:20.04
-RUN apt-get -y update
-RUN apt-get -y install nginx
+RUN apt update
+RUN apt -y install ruby ruby-dev
+RUN gem install gazer
+
+RUN pip install looker-deployer
