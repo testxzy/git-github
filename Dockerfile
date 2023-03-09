@@ -12,4 +12,4 @@ RUN mkdir looker_export
 
 RUN ldeploy content export --env dev  --ini /looker_code/looker.ini  --folders 146 --local-target /looker_export/
 
-RUN ls looker_export
+RUN ls looker_export/Shared/'Looker SDK Test'
