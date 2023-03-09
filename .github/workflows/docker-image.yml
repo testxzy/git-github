@@ -1,14 +1,19 @@
 name: Docker Image CI
 
 on:
-  issue_comment:
-    types: [created]
-    
-jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo 'hello world'
- 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
