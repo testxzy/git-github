@@ -5,8 +5,8 @@ on:
     branches: [ "main" ]
     
 jobs:
-  triage:
-    if: contains (github.event.comment.body , 'amir')
+  job1:
+    if: ${{ contains(ggithub.event.comment.body, 'amir') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
