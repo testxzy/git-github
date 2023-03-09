@@ -1,8 +1,11 @@
 name: Docker Image CI
 
 on:
-  issue_comment:
-    types: [created]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
 jobs:
   example:
     runs-on: ubuntu-latest
