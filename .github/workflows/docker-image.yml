@@ -9,7 +9,7 @@ on:
 jobs:
   triage:
     if: >-
-      github.event.comment.body == 'amir'
+      contains (github.event.comment.body == 'amir')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
