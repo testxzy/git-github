@@ -10,6 +10,9 @@ RUN pip install looker-deployer
 
 RUN mkdir looker_export
 
-RUN ldeploy content export --env dev  --ini /looker_code/looker.ini  --folders 146 --local-target /looker_export/
+#testing.. folder 146 = Looker SDK Test
+RUN ldeploy content export --env dev  --ini /looker_code/looker.ini  --folders 117 --local-target /looker_export/
 
 RUN ls looker_export/Shared/'Looker SDK Test'
+
+RUN ldeploy content import --env prd  --ini /looker_code/looker.ini  --folders  /looker_export/Shared/ --recursive
