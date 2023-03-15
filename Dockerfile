@@ -3,11 +3,11 @@ ARG release_name
 
 ADD /looker_code /looker_code
 
-RUN apt update
-RUN apt -y install ruby ruby-dev
-RUN gem install gazer
+#RUN apt update
+#RUN apt -y install ruby ruby-dev
+#RUN gem install gazer
 
-RUN pip install looker-deployer
+#RUN pip install looker-deployer
 
 RUN mkdir looker_export
 
