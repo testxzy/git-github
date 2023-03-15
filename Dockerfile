@@ -1,4 +1,5 @@
 FROM python:3.9-slim
+ARG release_name
 
 ADD /looker_code /looker_code
 
@@ -9,6 +10,8 @@ RUN gem install gazer
 RUN pip install looker-deployer
 
 RUN mkdir looker_export
+
+RUN echo $release_name
 
 #testing.. folder 146 = Looker SDK Test
 
