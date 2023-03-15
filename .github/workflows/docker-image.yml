@@ -19,5 +19,5 @@ jobs:
       id: extract_branch
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) --build-arg release_name=eng:${{ steps.extract_branch.outputs.branch }}
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) --build-arg release_name=${{ steps.extract_branch.outputs.branch }}
 
