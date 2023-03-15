@@ -9,9 +9,13 @@ ADD /looker_code /looker_code
 
 #RUN pip install looker-deployer
 
+#Step 1 set the release branch
+
+RUN python3 -W ignore /looker_code/deploy_looker.py 'panderasystems.looker.com' $release_name
+
 RUN mkdir looker_export
 
-RUN echo $release_name
+#RUN echo $release_name
 
 #testing.. folder 146 = Looker SDK Test
 
